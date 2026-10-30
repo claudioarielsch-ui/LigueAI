@@ -42,25 +42,25 @@ class MainActivity : Activity() {
             setPadding(0, 0, 0, 30)
         }
 
-        contenido.addView(texto("LIGUE AI", 32, true, colores.getValue("dorado")))
-        contenido.addView(texto("Tu estratega personal de conversaciones", 15, false, Color.LTGRAY))
+        contenido.addView(texto("LIGUE AI", 32f, true, colores.getValue("dorado")))
+        contenido.addView(texto("Tu estratega personal de conversaciones", 15f, false, Color.LTGRAY))
         contenido.addView(espacio(28))
 
-        contenido.addView(texto("01  ELEGÍ TU MODO", 17, true, Color.WHITE))
+        contenido.addView(texto("01  ELEGÍ TU MODO", 17f, true, Color.WHITE))
         contenido.addView(selector(
             listOf("Estratega", "Directo", "Divertido", "Romántico"),
             "Estratega"
         ) { modo = it })
 
         contenido.addView(espacio(20))
-        contenido.addView(texto("02  ¿QUÉ BUSCÁS?", 17, true, Color.WHITE))
+        contenido.addView(texto("02  ¿QUÉ BUSCÁS?", 17f, true, Color.WHITE))
         contenido.addView(selector(
             listOf("Generar atracción", "Mantener interés", "Conquistar", "Responder con humor"),
             "Generar atracción"
         ) { objetivo = it })
 
         contenido.addView(espacio(20))
-        contenido.addView(texto("03  NIVEL DE PICARDÍA", 17, true, Color.WHITE))
+        contenido.addView(texto("03  NIVEL DE PICARDÍA", 17f, true, Color.WHITE))
         contenido.addView(selector(
             listOf("Variable", "Sutil", "Atrevida"),
             "Variable"
@@ -78,7 +78,7 @@ class MainActivity : Activity() {
         contenido.addView(botonImagen)
 
         contenido.addView(espacio(15))
-        contenido.addView(texto("También podés contarme qué está pasando:", 14, false, Color.LTGRAY))
+        contenido.addView(texto("También podés contarme qué está pasando:", 14f, false, Color.LTGRAY))
 
         val contexto = EditText(this).apply {
             hint = "Ej.: Me respondió después de dos días..."
@@ -126,7 +126,7 @@ Contexto: ${contexto.text}
         contenido.addView(espacio(20))
         contenido.addView(texto(
             "LIGUE AI  •  Tu próxima respuesta puede cambiarlo todo.",
-            12, false, Color.GRAY
+            12f, false, Color.GRAY
         ))
 
         scroll.addView(contenido)
